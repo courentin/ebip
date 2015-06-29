@@ -1,12 +1,26 @@
 <?php 
+require 'vendor/autoload.php';
 
-require 'class/Slim/Slim.php';
-\Slim\Slim::registerAutoloader();
 
 $app = new \Slim\Slim();
 
 $app->get('/', function () {
-    echo "Hello";
-});
+
+})->name("home");
+
+$app->get('/habitat', function () {
+
+})->name("habitat");
+
+$app->get('/industrie', function () {
+
+})->name("industrie");
+
+
+$app->get('/contact/(:type)', function ($type = 'default') {
+		echo $type;
+	})
+	->name("contact")
+	->conditions(['type' => '(default|industrie|habitat)']);
 
 $app->run();

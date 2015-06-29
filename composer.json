@@ -1,0 +1,34 @@
+{
+    "name": "ebip",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/gjedeer/celery-php"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url" : "https://github.com/courentin/FormHelper.git"
+        }
+    ],
+    "require": {
+        "slim/slim": "2.*",
+        "FormHelper":"master"
+    },
+    "autoload": {
+        "psr-4": {
+            "FormHelper": "vendor"
+        }
+    },
+    "authors": [
+        {
+            "name": "Corentin HEMBISE",
+            "email": "ch2kn@free.fr"
+        },
+        {
+            "name": "Morgan PASQUOTTO",
+            "email": ""
+        }
+    ]
+}
