@@ -1,0 +1,88 @@
+/* line 3, compass/sass/contact.scss */
+#map-canvas {
+  height: 117%;
+}
+
+/* line 6, compass/sass/contact.scss */
+.contact-informations {
+  float: left;
+  width: 580px;
+  margin-top: 70px;
+  font-size: .86em;
+  font-style: normal;
+}
+@media screen and (max-width: 1200px) {
+  /* line 6, compass/sass/contact.scss */
+  .contact-informations {
+    width: 49%;
+    font-size: .7em;
+  }
+}
+@media screen and (max-width: 630px) {
+  /* line 6, compass/sass/contact.scss */
+  .contact-informations {
+    width: 100%;
+  }
+}
+/* line 20, compass/sass/contact.scss */
+.contact-informations p {
+  margin: 0;
+  font-size: 4.5em;
+  font-weight: lighter;
+  padding-left: 70px;
+  line-height: 1.3em;
+  margin-bottom: 0.5em;
+}
+/* line 28, compass/sass/contact.scss */
+.contact-informations .contact-icon {
+  height: 54px;
+  width: 54px;
+  display: block;
+  float: left;
+  margin-top: 1.3em;
+}
+/* line 35, compass/sass/contact.scss */
+.contact-informations .contact-icon-location {
+  background-image: url("../img/location.svg");
+}
+/* line 39, compass/sass/contact.scss */
+.contact-informations .contact-icon-phone {
+  background-image: url("../img/phone.svg");
+}
+/* line 43, compass/sass/contact.scss */
+.contact-informations .contact-icon-director {
+  background-image: url("../img/proprio.svg");
+}
+
+/* line 48, compass/sass/contact.scss */
+.contact-form {
+  margin-top: 70px;
+  float: right;
+  width: 520px;
+}
+@media screen and (max-width: 1200px) {
+  /* line 48, compass/sass/contact.scss */
+  .contact-form {
+    width: 49%;
+  }
+}
+@media screen and (max-width: 630px) {
+  /* line 48, compass/sass/contact.scss */
+  .contact-form {
+    width: 100%;
+    font-size: 1.3em;
+  }
+}
+/* line 59, compass/sass/contact.scss */
+.contact-form .error {
+  margin-bottom: 15px;
+}
+/* line 62, compass/sass/contact.scss */
+.contact-form .success {
+  margin-top: 50%;
+}
+
+/* line 67, compass/sass/contact.scss */
+.g-recaptcha {
+  margin-bottom: 1.7em;
+}

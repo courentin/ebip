@@ -1,2 +1,4 @@
 siteEbip.sublime-project
 siteEbip.sublime-workspace
+vendor/*
+cache

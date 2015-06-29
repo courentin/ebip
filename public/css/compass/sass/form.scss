@@ -1,0 +1,80 @@
+@import "vars";
+
+.form {
+
+	h2 {
+		font-size: 2em;
+		margin: 0 0 1em 0;
+		font-weight: normal;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+	span {
+		color: #636363;
+	}
+	.form-label {
+		font-weight: lighter;
+		color: #727272;
+		display: block;
+	}
+	input, textarea {
+		-webkit-appearance:none;
+	}
+	.form-input {
+		padding: 1em 0.8em 0.2em 0.8em;
+		margin-bottom: 1.7em;
+		border:none;
+		font-size: 1.2em;
+		width: 100%;
+		background: #fafafa;
+		border-radius: 0.2em;
+		border:1px solid #C1C1C1;
+		display: block;
+		box-shadow: none;
+		
+		transition:background $anim-duration, border $anim-duration;
+
+		&:focus, &:valid {
+			background: #FFF;
+			border-color:$main-color;
+			outline: none
+		}
+
+		&:invalid:focus {
+			border-color:#c0392b;
+		}
+
+	}
+	textarea.form-input {
+			max-width: 100%;
+			min-width: 100%;
+			font-family: inherit;
+			font-size: 1.2em;
+			padding-top: 1.1em;
+	}
+	.form-element {
+		position: relative;
+	}
+	.form-label {
+		position: absolute;
+		left: 1em;
+		top:.15em;
+	}
+	
+	.form-submit {
+		border:none;
+		background: $main-color;
+		color:#FFF;
+		font-size: 1.2em;
+		display:block;
+		border-radius: 0.2em;
+		width: 100%;
+		padding: 0.5em 1em;
+		font-weight: lighter;
+		cursor: pointer;
+		border-bottom: 3px solid #C95E2C;
+		&::-moz-focus-inner {
+		  border: 0;
+		}
+	}
+}

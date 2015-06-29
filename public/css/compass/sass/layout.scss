@@ -1,0 +1,12 @@
+body {
+	margin: 0;
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	padding:0 20px;
+	@media screen and (max-width: $max-width) {
+		width:100%;
+	}
+}

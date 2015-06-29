@@ -1,0 +1,130 @@
+.header {
+	background: #636363;
+	height: 180px;
+	.container {
+		position: relative;
+		height: 100%;
+	}
+	width: 100%;
+	@include transition(all $anim-duration);
+}
+
+.header-logo {
+	background:url(../img/WHITE.svg);
+	
+	height:155px;
+	width:286px;
+	z-index: 20;
+	position: absolute;
+	display: block;
+	top:50%;
+	left: -30px;
+	@include transform(translateY(-50%));
+	transition: all $anim-duration;
+}
+
+.header-mobile-menu { display: none;}
+
+.nav {
+	position: absolute;
+	padding-left: 194px;
+	text-align: center;
+	top:50%;
+	right: 3%;
+	@include transform(translateY(-50%));
+	@include transition(all $anim-duration);
+	a {
+		margin: 0 2em;
+		display: inline-block;
+		line-height: 2.5em;
+		font-size: 2.2em;
+		font-weight: lighter;
+		text-decoration: none;
+		color: #FFF;
+		@include transition(color $anim-duration);
+
+		&:hover {
+			color:$main-color;
+		}
+	}
+
+	a.active {
+		color:$main-color;
+	}
+}
+
+.header.fixed {
+	position: fixed;
+	min-height: 80px;
+	max-height: 80px;
+	z-index: 5;
+
+	.header-logo {
+		width: 137px;
+		height:71px;
+		margin-top: 3px;
+		margin-left: 0;
+	}
+	.nav {
+		margin-top: 19px;
+	}
+}
+
+@media screen and (max-width: $max-width) {
+	.header-logo {
+		left:0px;
+		height: 134px;
+		width: 247px;
+	}
+	.nav a {
+		margin: 0 .8em;
+	}
+}
+
+@media screen and (max-width: 630px) {
+	.header {
+		height: 120px;
+	}
+	.header-logo {
+		height: 100px;
+		width: 185px;
+		position: relative;
+		margin: auto;
+	}
+
+	.header-mobile-menu {
+		display: block;
+		position: absolute;
+		z-index: 20;
+		left: -23px;
+		top:50%;
+		@include transform(translateY(-50%));
+		border:none;
+		background: url(../img/menu.svg) no-repeat;
+		height: 37px;
+		width: 65px;
+		cursor: pointer;
+	}
+
+	.nav {
+		position: fixed;
+		left:0;
+		top:0;
+		z-index: 10;
+		padding: 120px 0 0 0;
+		width: 70%;
+		min-width: 390px;
+		height: 100%;
+		@include transform(translateX(-100%));
+		background: #636363;
+
+		a {
+			display: block;
+			font-size: 3em;
+			margin: 0;
+		}
+	}
+	.nav.open {
+		transform:translateX(0%);
+	}
+}

@@ -1,0 +1,50 @@
+/* line 3, compass/sass/habitat.scss */
+.bull {
+  clear: both;
+  margin-top: 90px;
+  text-align: center;
+}
+/* line 7, compass/sass/habitat.scss */
+.bull .bull-item {
+  width: 220px;
+  margin: 4px;
+  vertical-align: top;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+/* line 14, compass/sass/habitat.scss */
+.bull .bull-item img {
+  width: 80px;
+  height: 80px;
+  background: #f18854;
+  border-radius: 50%;
+  padding: 15px;
+  transition: all 0.27s cubic-bezier(0, 1.8, 1, 1.8);
+  box-sizing: initial;
+}
+/* line 23, compass/sass/habitat.scss */
+.bull .bull-item img:hover {
+  height: 70px;
+  width: 70px;
+  padding: 25px;
+  margin: -5px;
+}
+/* line 30, compass/sass/habitat.scss */
+.bull .bull-item h4 {
+  font-size: 1.3em;
+  color: #3c3c3c;
+  margin-bottom: .4em;
+  margin-top: 0.7em;
+}
+/* line 36, compass/sass/habitat.scss */
+.bull .bull-item p {
+  margin: 0;
+  font-size: 1em;
+  font-weight: lighter;
+}
+
+/* line 44, compass/sass/habitat.scss */
+.large-habitat {
+  background-image: url(../img/large-screen/habitat.jpg);
+}

@@ -1,26 +1,36 @@
 <?php 
 require 'vendor/autoload.php';
 
+$app = new \Slim\App();
 
-$app = new \Slim\Slim();
+$container = $app->getContainer();
 
-$app->get('/', function () {
+$container->register(new \Slim\Views\Twig('public/view/', [
+    'cache' => 'cache/'
+]));
 
-})->name("home");
+
+$app->get('/', function ($reqquest,$response,$args) {
+    return $this->view->render($response, 'index.html', ['test', 'oui']);
+})->setName("index");
 
 $app->get('/habitat', function () {
 
-})->name("habitat");
+})->setName("habitat");
 
 $app->get('/industrie', function () {
 
-})->name("industrie");
+})->setName("industrie");
 
 
 $app->get('/contact/(:type)', function ($type = 'default') {
 		echo $type;
 	})
-	->name("contact")
-	->conditions(['type' => '(default|industrie|habitat)']);
+	->setName("contact");
+
+$app->post('/contact/(:type)', function ($type = 'default') {
+		echo $type;
+	})
+	->setName("contact_post");
 
 $app->run();
