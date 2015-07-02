@@ -11,7 +11,10 @@ $container->register(new \Slim\Views\Twig('public/view/', [
 
 
 $app->get('/', function ($reqquest,$response,$args) {
-    return $this->view->render($response, 'index.html', ['test', 'oui']);
+	$imgs = [
+
+	];
+    return $this->view->render($response, 'index.html', ['imgs', $imgs]);
 })->setName("index");
 
 $app->get('/habitat', function () {
@@ -23,12 +26,12 @@ $app->get('/industrie', function () {
 })->setName("industrie");
 
 
-$app->get('/contact/(:type)', function ($type = 'default') {
-		echo $type;
+$app->get('/contact/{type}', function ($request,$response,$args) {
+		echo $args['type'];
 	})
 	->setName("contact");
 
-$app->post('/contact/(:type)', function ($type = 'default') {
+$app->post('/contact/{type}', function ($type = 'default') {
 		echo $type;
 	})
 	->setName("contact_post");

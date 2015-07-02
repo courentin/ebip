@@ -9,7 +9,7 @@ $(".header-mobile-menu").click(function() {
 * Effet parallax large-image
 */
 $( window ).scroll(function() {
-	$(".large-image").css({'transform':'translateY('+(-37+$(window).scrollTop()*0.2)+'px)'});
+	$(".large-parallax").css({'transform':'translateY('+(-37+$(window).scrollTop()*0.2)+'px)'});
 });
 
 /**
@@ -35,4 +35,12 @@ $(document).ready(function() {
 			$(this).find(".container").fadeIn(200);
 			$(this).find(".large-black").fadeIn(200);
 	});
+
+	/**
+	* Slider
+	*/
+	$('#glide').glide({
+       	type: 'carousel',
+       	animationDuration:800
+    });
 });

@@ -1,5 +1,37 @@
 {% extends 'layout.html' %}
 
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="public/css/glide.css">
+{% endblock %}
+{% block scripts %}
+<script src="public/js/glide.js" ></script>
+{% endblock %}
+
+
+{% block largescreen %}
+{% set content = '<h1>Titre</h1><h2>subtitle</h2>'%}
+{{ include('large-screen.html', {
+		'hover':false,
+
+		'header': true,
+		'parallax':true,
+		'slides': [	
+			{
+				'bg':'habitat.jpg',
+				'title':'aa',
+				'subtitle':'bb'
+			},
+			{
+				'bg':'industrie.jpg',
+				'title':'cc',
+				'subtitle':'dd'
+			}
+		]
+	})
+}}
+
+{% endblock %}
+
 {% block content %}
-hh
+	ss
 {% endblock %}

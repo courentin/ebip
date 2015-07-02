@@ -1,0 +1,37 @@
+$vert:#27ae60;
+$rouge:#c0392b;
+
+ @keyframes slideIn {
+   from {
+     max-height: 0;
+     transform:translateY(-100%);
+     opacity: 0;
+   }
+   
+   to {
+     max-height: 100px;
+     transform:translateY(0%);
+     opacity: 1;
+   }
+ }
+
+.flash {
+	font-size: 2em;
+	font-weight: lighter;
+	border:1px solid rgb(100,100,100);
+	color: rgb(100,100,100);
+	display: inline-block;
+	border-radius: .3em;
+	padding: .15em .6em;
+	animation: slideIn .5s ;
+}
+
+.success {
+	color: $vert;
+	border:1px solid $vert;
+}
+
+.error {
+	color: $rouge;
+	border:1px solid $rouge;
+}

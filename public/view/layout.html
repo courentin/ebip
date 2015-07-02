@@ -4,9 +4,8 @@
 	<title>{% block title%}Ebip{% endblock %}</title>
 	<meta charset="utf-8">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="public/css/default.css">
-	<link rel="stylesheet" type="text/css" href="public/css/form.css">
-	<link rel="stylesheet" type="text/css" href="public/css/contact.css">
+	<link rel="stylesheet" type="text/css" href="public/css/app.css">
+	{% block stylesheet %}{% endblock %}
 	<link rel="icon" type="image/png" href="public/img/favicon.png" sizes="64x64">
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
 	<!--[if lt IE 9]>
@@ -18,6 +17,7 @@
 	<script src="public/js/maps.js" ></script>
 	<script src="public/js/form.js" ></script>
 	<script src="public/js/hoverIntent.js" ></script>
+	{% block scripts %}{% endblock %}
 </head>
 <body>
 	<header class="header">
@@ -27,10 +27,10 @@
 			{% include('menu.html') %}
 		</div>
 	</header>
-
-	{% block content %}
-	{% endblock %}
-
+	{% block largescreen %}{% endblock %}
+	<div class="container">
+		{% block content %}{% endblock %}
+	</div>
 	<footer>© Copyright 2015 - Ebip</footer>
 </body>
 </html>

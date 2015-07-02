@@ -1,0 +1,59 @@
+#map-canvas {
+	height: 117%;
+}
+.contact-informations {
+	float: left;
+	width: 580px;
+	margin-top: 70px;
+	font-size: .86em;
+	@media screen and (max-width: $max-width) {
+		width:49%;
+		font-size: .7em;
+	}
+
+	@media screen and (max-width: 630px) {
+		width:100%;
+	}
+	p {
+		margin: 0;
+		font-size: 4.5em;
+		font-weight: lighter;
+		padding-left: 70px;
+		line-height: 1.3em;
+		margin-bottom: .5em
+	}
+	.contact-icon {
+		height: 54px;
+		width: 54px;
+		display: block;
+		float: left;
+		margin-top: 1.3em;
+	}
+	.contact-icon-location {
+		background-image: url('../../img/location.svg');
+	}
+
+	.contact-icon-phone {
+		background-image: url('../../img/phone.svg');
+	}
+
+	.contact-icon-director {
+		background-image: url('../../img/proprio.svg');
+	}
+}
+
+.contact-form {
+	margin-top: 70px;
+	float: right;
+	width: 520px;
+	@media screen and (max-width: $max-width) {
+		width:49%;
+	}
+	@media screen and (max-width: 630px) {
+		width:100%;
+		font-size:1.3em;
+	}
+	.error {
+		margin-bottom: 15px;
+	}
+}

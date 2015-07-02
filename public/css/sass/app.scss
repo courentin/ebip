@@ -1,0 +1,18 @@
+$main-color:#f18854;
+$text-color:#282828;
+$anim-duration:.3s;
+$max-width:1200px;
+
+@import "compass";
+
+@import "base";
+
+@import "layout";
+
+@import "large";
+@import "boutons";
+@import "header";
+@import "contact";
+@import "habitat";
+@import "flash";
+@import "form";

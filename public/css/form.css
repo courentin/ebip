@@ -1,82 +1,92 @@
-/* line 5, compass/sass/form.scss */
-.form h2 {
-  font-size: 2em;
-  margin: 0 0 1em 0;
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-/* line 12, compass/sass/form.scss */
-.form span {
-  color: #636363;
-}
-/* line 15, compass/sass/form.scss */
-.form .form-label {
-  font-weight: lighter;
-  color: #727272;
-  display: block;
-}
-/* line 20, compass/sass/form.scss */
-.form input, .form textarea {
-  -webkit-appearance: none;
-}
-/* line 23, compass/sass/form.scss */
-.form .form-input {
-  padding: 1em 0.8em 0.2em 0.8em;
-  margin-bottom: 1.7em;
-  border: none;
-  font-size: 1.2em;
-  width: 100%;
-  background: #fafafa;
-  border-radius: 0.2em;
-  border: 1px solid #C1C1C1;
-  display: block;
-  box-shadow: none;
-  transition: background 0.3s, border 0.3s;
-}
-/* line 37, compass/sass/form.scss */
-.form .form-input:focus, .form .form-input:valid {
-  background: #FFF;
-  border-color: #f18854;
-  outline: none;
-}
-/* line 43, compass/sass/form.scss */
-.form .form-input:invalid:focus {
-  border-color: #c0392b;
-}
-/* line 48, compass/sass/form.scss */
-.form textarea.form-input {
-  max-width: 100%;
-  min-width: 100%;
-  font-family: inherit;
-  font-size: 1.2em;
-  padding-top: 1.1em;
-}
-/* line 55, compass/sass/form.scss */
-.form .form-element {
-  position: relative;
-}
-/* line 58, compass/sass/form.scss */
-.form .form-label {
-  position: absolute;
-  left: 1em;
-  top: .15em;
-}
-/* line 64, compass/sass/form.scss */
-.form .form-submit {
-  border: none;
-  background: #f18854;
-  color: #FFF;
-  font-size: 1.2em;
-  display: block;
-  border-radius: 0.2em;
-  width: 100%;
-  padding: 0.5em 1em;
-  font-weight: lighter;
-  cursor: pointer;
-  border-bottom: 3px solid #C95E2C;
-}
-/* line 76, compass/sass/form.scss */
-.form .form-submit::-moz-focus-inner {
-  border: 0;
-}
+/*
+Error: Undefined variable: "$anim-duration".
+        on line 33 of /home/corentin/Dropbox/Projets/ebip/site/public/css/sass/form.scss
+
+28: 		border-radius: 0.2em;
+29: 		border:1px solid #C1C1C1;
+30: 		display: block;
+31: 		box-shadow: none;
+32: 		
+33: 		transition:background $anim-duration, border $anim-duration;
+34: 
+35: 		&:focus, &:valid {
+36: 			background: #FFF;
+37: 			border-color:$main-color;
+38: 			outline: none
+
+Backtrace:
+/home/corentin/Dropbox/Projets/ebip/site/public/css/sass/form.scss:33
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/script/tree/variable.rb:49:in `_perform'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/script/tree/node.rb:50:in `perform'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/script/tree/list_literal.rb:63:in `map'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/script/tree/list_literal.rb:63:in `_perform'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/script/tree/node.rb:50:in `perform'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/script/tree/list_literal.rb:63:in `map'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/script/tree/list_literal.rb:63:in `_perform'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/script/tree/node.rb:50:in `perform'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/stack.rb:79:in `block in with_base'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/stack.rb:115:in `with_frame'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/stack.rb:79:in `with_base'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:430:in `map'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/stack.rb:79:in `block in with_base'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/stack.rb:115:in `with_frame'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/stack.rb:79:in `with_base'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:430:in `map'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/stack.rb:79:in `block in with_base'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/stack.rb:115:in `with_frame'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/stack.rb:79:in `with_base'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:52:in `map'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/root_node.rb:36:in `css_tree'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/root_node.rb:20:in `render'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/engine.rb:268:in `render'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:209:in `each'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:293:in `watch'
+/var/lib/gems/1.9.1/gems/compass-1.0.3/lib/compass/sass_compiler.rb:46:in `watch!'
+/var/lib/gems/1.9.1/gems/compass-1.0.3/lib/compass/commands/watch_project.rb:41:in `perform'
+/var/lib/gems/1.9.1/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+/var/lib/gems/1.9.1/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+/var/lib/gems/1.9.1/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/var/lib/gems/1.9.1/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/var/lib/gems/1.9.1/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+/var/lib/gems/1.9.1/gems/compass-1.0.3/bin/compass:44:in `call'
+/var/lib/gems/1.9.1/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+/usr/local/bin/compass:23:in `load'
+/usr/local/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$anim-duration\".\A         on line 33 of /home/corentin/Dropbox/Projets/ebip/site/public/css/sass/form.scss\A \A 28: 		border-radius: 0.2em;\A 29: 		border:1px solid #C1C1C1;\A 30: 		display: block;\A 31: 		box-shadow: none;\A 32: 		\A 33: 		transition:background $anim-duration, border $anim-duration;\A 34: \A 35: 		&:focus, &:valid {\A 36: 			background: #FFF;\A 37: 			border-color:$main-color;\A 38: 			outline: none"; }

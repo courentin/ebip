@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$anim-duration".
-        on line 9 of /home/corentin/Dropbox/Projets/ebip/site/public/css/sass/boutons.scss
+        on line 6 of /home/corentin/Dropbox/Projets/ebip/site/public/css/sass/large.scss
 
-4: 	padding: 0.2em 0.6em;
-5: 	color: #FFF;
-6: 	text-decoration: none;
-7: 	font-size: 20px;
-8: 	display: inline-block;
-9: 	transition: all $anim-duration;
-10: 
-11: 	&:hover {
-12: 		background:#FFF;
-13: 		color: $text-color;
-14: 	}
+1: .large {
+2: 	height: 365px;
+3: 	color: #FFF;
+4: 	position: relative;
+5: 	overflow: hidden;
+6: 	transition: height $anim-duration;
+7: }
+8: @media screen and (max-width: $max-width) {
+9: 	.large {
+10: 		height: 330px;
+11: 	}
 
 Backtrace:
-/home/corentin/Dropbox/Projets/ebip/site/public/css/sass/boutons.scss:9
+/home/corentin/Dropbox/Projets/ebip/site/public/css/sass/large.scss:6
 /var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/script/tree/variable.rb:49:in `_perform'
 /var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/script/tree/node.rb:50:in `perform'
 /var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
@@ -74,4 +74,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$anim-duration\".\A         on line 9 of /home/corentin/Dropbox/Projets/ebip/site/public/css/sass/boutons.scss\A \A 4: 	padding: 0.2em 0.6em;\A 5: 	color: #FFF;\A 6: 	text-decoration: none;\A 7: 	font-size: 20px;\A 8: 	display: inline-block;\A 9: 	transition: all $anim-duration;\A 10: \A 11: 	&:hover {\A 12: 		background:#FFF;\A 13: 		color: $text-color;\A 14: 	}"; }
+  content: "Error: Undefined variable: \"$anim-duration\".\A         on line 6 of /home/corentin/Dropbox/Projets/ebip/site/public/css/sass/large.scss\A \A 1: .large {\A 2: 	height: 365px;\A 3: 	color: #FFF;\A 4: 	position: relative;\A 5: 	overflow: hidden;\A 6: 	transition: height $anim-duration;\A 7: }\A 8: @media screen and (max-width: $max-width) {\A 9: 	.large {\A 10: 		height: 330px;\A 11: 	}"; }

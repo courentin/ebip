@@ -1,0 +1,61 @@
+<div class="large{% if header %}-header{% endif %}">
+
+	{% if black is defined and black %}
+	 <div class="large-black {% if hover is defined and defined %}back-hover{%endif%}"></div>
+	{% endif %}
+
+
+	{% if     fixe is defined %}
+		<div class="large-content-middle"><!-- middle/right-bottom --> 
+			{{ fixe.content | raw }}
+		</div>
+		<div class="large-bg-img {% if parallax is defined and parallax %}large-parallax{%endif%}" style="background-image: url('public/img/large-screen/{{fixe.bg}}')"></div>
+	{% elseif slides is defined %}
+		<div id="glide" class="glide">
+		    <div class="glide__arrows">
+		        <span class="glide__arrow prev" data-glide-dir="<"></span>
+		        <span class="glide__arrow next" data-glide-dir=">"></span>
+		    </div>
+		    <div class="glide__wrapper">
+
+		    	{% for slide in slides %}
+		    	<div class="glide__slide large-bg-img" style="background-image: url('public/img/large-screen/{{slide.bg}}')">
+			    	<div class="container">
+			    		<div class="large-content-right">
+			    			<h1>{{slide.title}}</h1>
+			    			<h2>{{slide.subtitle}}</h2>
+			    		</div>
+			    	</div>
+		    	</div>
+		    	{% endfor %}
+		    </div>
+		    <ul class="glide__bullets"></ul>
+		</div>
+	{% elseif map is defined %}
+		<div id="map-canvas" class="large-bg-map large-parallax"></div>
+	{% endif %}
+</div>
+
+<!--
+<div class="large-screen 
+{% if hover %}
+large-hover
+{% endif %}
+">
+	<div class="large-black"></div>
+	<div class="container">
+		{% for image in images %}
+			<img src="img/large-screen/{{image}}" class="large-image">
+		{% endfor %}
+		<div class="title">
+			<h1>{{title}}</h1>
+			<h2>{{subtitle}}</h2>
+			{% for button in buttons %}
+				<a href="{{button.link}}" class="btn-classic blanc">{{button.label}}</a>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="large-image large-bg" style="background-image:url(../img/large-screen/{{img}})" ></div>
+	>
+</div>
+-->
