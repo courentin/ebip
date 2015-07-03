@@ -53,7 +53,7 @@
 }
 
 .glide__arrow.prev {
-  background: url(../../img/left.svg) no-repeat center center;
+  background: url(../img/left.svg) no-repeat center center;
   left: 0;
 }
 .glide__arrow.prev:hover {
@@ -62,7 +62,7 @@
 }
 
 .glide__arrow.next {
-  background: url(../../img/right.svg) no-repeat center center;
+  background: url(../img/right.svg) no-repeat center center;
   right: 0;
 }
 .glide__arrow.next:hover {

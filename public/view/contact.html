@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{parent()}} pour l'industrie{% endblock %}
+{% block scripts %}
+	<script src="public/js/maps.js" ></script>
+	<script src="public/js/form.js" ></script>
+	<script src="public/js/hoverIntent.js" ></script>
+{% endblock %}
+
+
+
+{% set largecontent %}
+<h1>Contact</h1>
+{% endset %}
+
+{% block largescreen %}
+{{ include('large-screen.html',{
+		'map':true
+	})
+}}
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}

@@ -1,4 +1,4 @@
-<div class="large{% if header %}-header{% endif %}">
+<div {%if height is defined%}style="height:{{height}}"{%endif%} class="large{% if header %}-header{% endif %}">
 
 	{% if black is defined and black %}
 	 <div class="large-black {% if hover is defined and defined %}back-hover{%endif%}"></div>
@@ -35,27 +35,3 @@
 		<div id="map-canvas" class="large-bg-map large-parallax"></div>
 	{% endif %}
 </div>
-
-<!--
-<div class="large-screen 
-{% if hover %}
-large-hover
-{% endif %}
-">
-	<div class="large-black"></div>
-	<div class="container">
-		{% for image in images %}
-			<img src="img/large-screen/{{image}}" class="large-image">
-		{% endfor %}
-		<div class="title">
-			<h1>{{title}}</h1>
-			<h2>{{subtitle}}</h2>
-			{% for button in buttons %}
-				<a href="{{button.link}}" class="btn-classic blanc">{{button.label}}</a>
-			{% endfor %}
-		</div>
-	</div>
-	<div class="large-image large-bg" style="background-image:url(../img/large-screen/{{img}})" ></div>
-	>
-</div>
--->

@@ -1,6 +1,5 @@
 /vendor/
 /cache/
-/public/.sass-cache
 /public/css/.sass-cache
 siteEbip.sublime-project
 siteEbip.sublime-workspace

@@ -790,11 +790,6 @@ body {
   font-weight: lighter;
 }
 
-/* line 42, sass/habitat.scss */
-.large-habitat {
-  background-image: url(../../img/large-screen/habitat.jpg);
-}
-
 @keyframes slideIn {
   from {
     max-height: 0;

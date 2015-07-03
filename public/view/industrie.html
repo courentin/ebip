@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{parent()}} pour l'industrie{% endblock %}
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="public/css/glide.css">
+{% endblock %}
+{% block scripts %}
+<script src="public/js/glide.js" ></script>
+{% endblock %}
+
+
+
+{% set largecontent %}
+<h1>Industrie</h1>
+<h2>Dans le domaine de l’industrie, Ebip vous propose des solutions de câblage d’armoires et d’équipements électrique.</h2>
+<a href="{{ url_for('contact',{'type':'industrie'}) }}" class="btn-classic">Contactez-nous</a>
+{% endset %}
+
+{% block largescreen %}
+{{ include('large-screen.html',{
+		'black'	:true,
+		'parallax':true,
+		'header':true,
+		'fixe'  : {
+			'bg'      : 'industrie.jpg',
+			'content' : largecontent
+		}
+	})
+}}
+{% endblock %}
+
+{% block content %}
+	<h3 class="sub-title1">Ebip pour l'industrie, c'est :</h3>
+
+	<h3 class="sub-title1">Notre savoir faire</h3>
+</div>
+	{{ include('large-screen.html',{
+		'height':'600px',
+		'slides'  : [
+			{
+				'bg':'industrie.jpg',
+				'title':'Titre',
+				'subtitle':'sous-titre'
+			}
+		]
+	})
+}}
+
+{% endblock %}

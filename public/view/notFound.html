@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{parent()}} - page introuvable{% endblock %}
+
+{% set largecontent %}
+<h1>Erreur 404</h1>
+<h2>La page '{{}}' n'existe pas</h2>
+{% endset %}
+
+{% block largescreen %}
+{{ include('large-screen.html',{
+		'map':true
+	})
+}}
+{% endblock %}
