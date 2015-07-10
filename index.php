@@ -3,25 +3,30 @@ require 'vendor/autoload.php';
 
 $app = new \Slim\App();
 
+
 $container = $app->getContainer();
 
 $container->register(new \Slim\Views\Twig('public/view/', [
+	'debug' => true
    // 'cache' => 'cache/',
 ]));
 
-/*
-$container['notFoundHandler'] = function ($container) {
-	return function ($request, $response) use ($container) {
-	    
-	    return $app->view->render($response, 'notFound.html');
-		
-		//return $container['response']->withStatus(404)->withHeader('Content-Type', 'text/html')->write('Page not found');
-
-	};
-};
+/**
+* Capture les pages inexistantes
 */
+$container['notFoundHandler'] = function ($c) use ($app) {
+    return function ($request, $response) use ($app,$c) {
+    	$response->withStatus(404);
+	    return $app->view->render($response, 'notFound.html', ['uri' => trim($request->getUri()->getPath(),'/')]);
+    };
+};
 
 
+
+
+/**
+* ROUTAGE
+*/
 $app->get('/', function ($request,$response,$args) {
 	$imgs = [
 
@@ -81,7 +86,7 @@ $app->post('/contact/{type:industrie|habitat|default}', function ($request,$resp
 		    )
 		);
 		$validation_result = SimpleValidator\Validator::validate($_POST, $rules);
-		
+
 		if ($validation_result->isSuccess() == true) {
 		    echo "validation ok";
 		} else {

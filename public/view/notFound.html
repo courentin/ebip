@@ -4,7 +4,8 @@
 
 {% set largecontent %}
 <h1>Erreur 404</h1>
-<h2>La page '' n'existe pas</h2>
+<h2>La page « {{uri}} » n'existe pas</h2>
+
 {% endset %}
 
 {% block largescreen %}
@@ -13,5 +14,9 @@
 		'bg':'fils.jpg',
 		'content':largecontent
 	}
+	})
 }}
+{% endblock %}
+
+{% block content %}
 {% endblock %}
