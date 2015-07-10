@@ -35,12 +35,4 @@ $(document).ready(function() {
 			$(this).find(".container").fadeIn(200);
 			$(this).find(".large-black").fadeIn(200);
 	});
-
-	/**
-	* Slider
-	*/
-	$('#glide').glide({
-       	type: 'carousel',
-       	animationDuration:800
-    });
 });

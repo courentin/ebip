@@ -2,9 +2,9 @@
 
 {% block title %}{{parent()}} pour l'industrie{% endblock %}
 {% block scripts %}
-	<script src="public/js/maps.js" ></script>
-	<script src="public/js/form.js" ></script>
-	<script src="public/js/hoverIntent.js" ></script>
+	<script src="/public/js/maps.js" ></script>
+	<script src="/public/js/form.js" ></script>
+	<script src="/public/js/hoverIntent.js" ></script>
 {% endblock %}
 
 
@@ -15,11 +15,94 @@
 
 {% block largescreen %}
 {{ include('large-screen.html',{
-		'map':true
+		'map':true,
+		'black':true,
+		'header':true
 	})
 }}
 {% endblock %}
 
 {% block content %}
+	<address class="contact-informations">
+		<p>SARL EBIP</p>
+		<i class="contact-icon contact-icon-location"></i>
+		<p>56 bis Rue Saint-Eloi 60400 Noyon</p>
+		<i class="contact-icon contact-icon-phone"></i>
+		<p>06 79 47 89 79</p>
+		<i class="contact-icon contact-icon-director"></i>
+		<p>Morgan PASQUOTTO</p>
+	</address>
+	<form class="form contact-form" id="form" method="post">			
+		<h2 class="form-title">Contactez-nous</h2>
+		<span>Tous les champs sont obligatoires</span>
+		<div class="form-element">
+			<label for="form-nom" class="form-label">Nom</label>
+			<input id="form-nom" class="form-input" type="text" required>
+		</div>
+		<div class="form-element">
+			<label for="form-prenom" class="form-label">Prénom</label>
+			<input id="form-prenom" class="form-input" type="text" required>
+		</div>
+		<div class="form-element">
+			<label for="form-mail" class="form-label">Mail</label>
+			<input id="form-mail" pattern="^.+@.+\.[A-z]{2,4}$" class="form-input" type="email" required>
+		</div>
+		<div class="form-element">
+			<label for="form-message" class="form-label">Votre message</label>
+			<textarea id="form-message" class="form-input" required></textarea>
+		</div>
+		<div class="g-recaptcha" data-sitekey="<?php echo Conf::$reCaptcha['sitekey']; ?>"></div>
+		<input class="form-submit" type="submit" value="Envoyer">
+	</form>
+	<div class="cb"></div>
+<script type="text/javascript">
 
+/**
+* Soumission du formulaire
+*/
+$(document).ready(function() {
+	var form = new Form("form");
+	$("#form").submit(function() {
+
+		var captcha = grecaptcha.getResponse();
+
+		form.setLoader();
+
+		if(captcha==="") {
+			form.removeLoader();
+			form.flashErr("Veuillez valider le captcha");
+		}
+		else {
+			$.ajax({
+				method: "POST",
+				url: "post",
+				data: {
+					nom     : form.get("form-nom"),
+					prenom  : form.get("form-prenom"),
+					mail    : form.get("form-mail"),
+					message : form.get("form-message"),
+					captcha : captcha,
+					from    : "<?= $from ?>"
+				},
+				dataType : "json"
+			}).fail(function() {
+				form.flashErr("Erreur lors de l'envoi du message");
+				grecaptcha.reset();
+			}).done(function(res) {
+				console.log(res);
+				res = JSON.parse(res);
+				if(res.success) form.flashSuc("Votre message a été envoyé !");
+				else {
+					form.flashErr(res.err);
+					grecaptcha.reset();
+				}
+			}).always(function() {
+				form.removeLoader();					
+			});
+		}
+		return false;
+	});
+});
+</script>
+<script src='https://www.google.com/recaptcha/api.js' async></script>
 {% endblock %}

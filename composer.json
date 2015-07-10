@@ -8,7 +8,9 @@
     ],
     "require": {
         "slim/twig-view": "^1.1",
-        "slim/slim": "dev-develop"
+        "slim/slim": "dev-develop",
+        "eoghanobrien/php-simple-mail": "dev-master",
+        "simple-validator/simple-validator": "dev-master"        
     },
     "authors": [
         {

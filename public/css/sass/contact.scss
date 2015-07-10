@@ -6,6 +6,8 @@
 	width: 580px;
 	margin-top: 70px;
 	font-size: .86em;
+	font-style: normal;
+
 	@media screen and (max-width: $max-width) {
 		width:49%;
 		font-size: .7em;
@@ -30,15 +32,15 @@
 		margin-top: 1.3em;
 	}
 	.contact-icon-location {
-		background-image: url('../../img/location.svg');
+		background-image: image-url('location.svg');
 	}
 
 	.contact-icon-phone {
-		background-image: url('../../img/phone.svg');
+		background-image: image-url('phone.svg');
 	}
 
 	.contact-icon-director {
-		background-image: url('../../img/proprio.svg');
+		background-image: image-url('proprio.svg');
 	}
 }
 

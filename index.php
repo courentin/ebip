@@ -6,10 +6,20 @@ $app = new \Slim\App();
 $container = $app->getContainer();
 
 $container->register(new \Slim\Views\Twig('public/view/', [
-    'cache' => 'cache/',
+   // 'cache' => 'cache/',
 ]));
 
+/*
+$container['notFoundHandler'] = function ($container) {
+	return function ($request, $response) use ($container) {
+	    
+	    return $app->view->render($response, 'notFound.html');
+		
+		//return $container['response']->withStatus(404)->withHeader('Content-Type', 'text/html')->write('Page not found');
 
+	};
+};
+*/
 
 
 $app->get('/', function ($request,$response,$args) {
@@ -26,22 +36,69 @@ $app->get('/habitat', function ($request,$response,$args) {
 
 
 $app->get('/industrie', function ($request,$response,$args) {
-    return $this->view->render($response, 'industrie.html');
+	$imgs = [
+		[
+			'bg'      => 'test.jpg',
+			'title'    => 'test',
+			'subtitle' =>'Sous-titre'
+		],
+		[
+			'bg'      => 'fils.jpg',
+			'title'    => 'Habitat',
+			'subtitle' =>'Sous-titre'
+		],
+		[
+			'bg'      => 'industrie.jpg',
+			'title'    => '',
+			'subtitle' =>''
+		]
+	];
+    return $this->view->render($response, 'industrie.html', ['imgs' => $imgs]);
 })->setName("industrie");
 
 
-$app->get('/contact/{type}', function ($request,$response,$args) {
+$app->get('/contact/{type:industrie|habitat|default}', function ($request,$response,$args) {
     return $this->view->render($response, 'contact.html');
-	})
-	->setName("contact");
+})->setName("contact");
 
-$app->post('/contact/{type}', function ($type = 'default') {
-		echo $type;
+
+$app->post('/contact/{type:industrie|habitat|default}', function ($request,$response,$args) {
+
+		$rules = array(
+		    'nom' => array(
+		        'required',
+		        'alpha',
+		        'max_length(50)'
+		    ),
+		    'prenom' => array(
+		        'required',
+		        'alpha',
+		        'max_length(50)'
+		    ),
+		    'mail' => array(
+		        'required',
+		        'email'
+		    )
+		);
+		$validation_result = SimpleValidator\Validator::validate($_POST, $rules);
+		
+		if ($validation_result->isSuccess() == true) {
+		    echo "validation ok";
+		} else {
+		    echo "validation not ok";
+		    var_dump($validation_result->getErrors());
+		}
+
+		$mail = new SimpleMail();
+		$mail->setSubject('Contact via Ebip.fr')
+			 ->setFrom('test@test.fr', 'test')
+			 ->setTo('ch2kn@free.fr', 'ch2kn')
+			 ->setMessage('test');
+
+		$send = $mail->send();
+		echo ($send) ? 'Email sent successfully' : 'Could not send email';
 	})
 	->setName("contact_post");
-
-
-
 
 
 $app->run();

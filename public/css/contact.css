@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$max-width".
-        on line 9 of /home/corentin/Dropbox/Projets/ebip/site/public/css/sass/contact.scss
+        on line 11 of /home/corentin/Dropbox/Projets/ebip/site/public/css/sass/contact.scss
 
-4: .contact-informations {
-5: 	float: left;
 6: 	width: 580px;
 7: 	margin-top: 70px;
 8: 	font-size: .86em;
-9: 	@media screen and (max-width: $max-width) {
-10: 		width:49%;
-11: 		font-size: .7em;
-12: 	}
-13: 
-14: 	@media screen and (max-width: 630px) {
+9: 	font-style: normal;
+10: 
+11: 	@media screen and (max-width: $max-width) {
+12: 		width:49%;
+13: 		font-size: .7em;
+14: 	}
+15: 
+16: 	@media screen and (max-width: 630px) {
 
 Backtrace:
-/home/corentin/Dropbox/Projets/ebip/site/public/css/sass/contact.scss:9
+/home/corentin/Dropbox/Projets/ebip/site/public/css/sass/contact.scss:11
 /var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/script/tree/variable.rb:49:in `_perform'
 /var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/script/tree/node.rb:50:in `perform'
 /var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:536:in `block in run_interp_no_strip'
@@ -58,20 +58,16 @@ Backtrace:
 /var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
 /var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:209:in `each'
 /var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:293:in `watch'
-/var/lib/gems/1.9.1/gems/compass-1.0.3/lib/compass/sass_compiler.rb:46:in `watch!'
-/var/lib/gems/1.9.1/gems/compass-1.0.3/lib/compass/commands/watch_project.rb:41:in `perform'
-/var/lib/gems/1.9.1/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
-/var/lib/gems/1.9.1/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
-/var/lib/gems/1.9.1/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/var/lib/gems/1.9.1/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/var/lib/gems/1.9.1/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
-/var/lib/gems/1.9.1/gems/compass-1.0.3/bin/compass:44:in `call'
-/var/lib/gems/1.9.1/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
-/usr/local/bin/compass:23:in `load'
-/usr/local/bin/compass:23:in `<main>'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+/var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:328:in `block in watch'
+/var/lib/gems/1.9.1/gems/listen-2.10.0/lib/listen/listener.rb:291:in `call'
+/var/lib/gems/1.9.1/gems/listen-2.10.0/lib/listen/listener.rb:291:in `_process_changes'
+/var/lib/gems/1.9.1/gems/listen-2.10.0/lib/listen/listener.rb:255:in `block in _wait_for_changes'
+/var/lib/gems/1.9.1/gems/listen-2.10.0/lib/listen/listener.rb:238:in `loop'
+/var/lib/gems/1.9.1/gems/listen-2.10.0/lib/listen/listener.rb:238:in `_wait_for_changes'
+/var/lib/gems/1.9.1/gems/listen-2.10.0/lib/listen/listener.rb:327:in `block in _start_wait_thread'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$max-width\".\A         on line 9 of /home/corentin/Dropbox/Projets/ebip/site/public/css/sass/contact.scss\A \A 4: .contact-informations {\A 5: 	float: left;\A 6: 	width: 580px;\A 7: 	margin-top: 70px;\A 8: 	font-size: .86em;\A 9: 	@media screen and (max-width: $max-width) {\A 10: 		width:49%;\A 11: 		font-size: .7em;\A 12: 	}\A 13: \A 14: 	@media screen and (max-width: 630px) {"; }
+  content: "Error: Undefined variable: \"$max-width\".\A         on line 11 of /home/corentin/Dropbox/Projets/ebip/site/public/css/sass/contact.scss\A \A 6: 	width: 580px;\A 7: 	margin-top: 70px;\A 8: 	font-size: .86em;\A 9: 	font-style: normal;\A 10: \A 11: 	@media screen and (max-width: $max-width) {\A 12: 		width:49%;\A 13: 		font-size: .7em;\A 14: 	}\A 15: \A 16: 	@media screen and (max-width: 630px) {"; }

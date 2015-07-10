@@ -31,19 +31,44 @@
 
 {% block content %}
 	<h3 class="sub-title1">Ebip pour l'industrie, c'est :</h3>
+	<div class="items">
+		<div class="item">
+			<img src="">
+			<h3>Solutions clef en main</h3>
+			<p>Ebip vous propose une solution clé en main, vous avez juste à nous confier votre projet avec vos choix d’installation, et nous nous chargeons de réunir les professionnels de l’artisanat.</p>
+		</div><!--
+	 --><div class="item">
+			<img src="">
+			<h3>Solutions clef en main</h3>
+			<p>Ebip vousn, et nous nous chargeons de réunir les professionnels de l’artisanat.</p>
+		</div><!--
+	 --><div class="item">
+			<img src="">
+			<h3>Solutions clef en main</h3>
+			<p>Ebip vous propose une solution clé en main, vous avez juste à nous confier votre projet avec vos choix d’installation, et nous nous chargeons de réunir les professionnels de l’artisanat.</p>
+		</div><!--
+	 --><div class="item">
+			<img src="">
+			<h3>Solution clef en main</h3>
+			<p>Ebip vous propose une solution clé en main, vous avez juste à nous confier votre projet avec vos choix d’installation, et nous nous chargeons de réunir les professionnels de l’artisanat.</p>
+		</div>
+	</div>
+
 
 	<h3 class="sub-title1">Notre savoir faire</h3>
+
+
 </div>
 	{{ include('large-screen.html',{
-		'height':'600px',
-		'slides'  : [
-			{
-				'bg':'industrie.jpg',
-				'title':'Titre',
-				'subtitle':'sous-titre'
-			}
-		]
-	})
-}}
-
+			'height':'600px',
+			'slides'  : imgs
+		})
+	}}
+<div class="content">
+	<h3 class="sub-title1">Ils nous ont fait confiance :</h3>
+	<div class="les-logos">
+		<img src="/public/img/clients/actemium.jpg" alt="Actemium" title="Actemium" height="150px">
+		<img src="/public/img/clients/cegelec.jpeg" alt="Cegelec" title="Cegelec" height="130px">
+		<img src="/public/img/clients/2idl.PNG" alt="2IDL" title="2IDL">
+	</div>
 {% endblock %}

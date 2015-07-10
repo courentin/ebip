@@ -4,12 +4,14 @@
 
 {% set largecontent %}
 <h1>Erreur 404</h1>
-<h2>La page '{{}}' n'existe pas</h2>
+<h2>La page '' n'existe pas</h2>
 {% endset %}
 
 {% block largescreen %}
 {{ include('large-screen.html',{
-		'map':true
-	})
+	'fixe': {
+		'bg':'fils.jpg',
+		'content':largecontent
+	}
 }}
 {% endblock %}

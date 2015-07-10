@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "190a3d3e032cdafbb885d8ff35b36a77",
+    "hash": "f6096c8d27c712e6a20dde0d20b3d173",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -32,6 +32,49 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "time": "2014-12-30 15:22:37"
+        },
+        {
+            "name": "eoghanobrien/php-simple-mail",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eoghanobrien/php-simple-mail.git",
+                "reference": "059ff7d07b4c2fa0609a148a7f8eea4e35e12da4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eoghanobrien/php-simple-mail/zipball/059ff7d07b4c2fa0609a148a7f8eea4e35e12da4",
+                "reference": "059ff7d07b4c2fa0609a148a7f8eea4e35e12da4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "class.simple_mail.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eoghan O'Brien",
+                    "email": "eoghan@eoghanobrien.com",
+                    "homepage": "http://www.eoghanobrien.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Simple PHP 5 Email Class with Chainable Methods",
+            "homepage": "https://github.com/eoghanobrien/php-simple-mail",
+            "keywords": [
+                "email",
+                "php5"
+            ],
+            "time": "2015-04-13 16:14:33"
         },
         {
             "name": "nikic/fast-route",
@@ -170,6 +213,42 @@
                 "response"
             ],
             "time": "2015-05-04 20:22:00"
+        },
+        {
+            "name": "simple-validator/simple-validator",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cangelis/simple-validator.git",
+                "reference": "f162c22bc1cd9c28b6ba79e9d7ac19d6acf18922"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cangelis/simple-validator/zipball/f162c22bc1cd9c28b6ba79e9d7ac19d6acf18922",
+                "reference": "f162c22bc1cd9c28b6ba79e9d7ac19d6acf18922",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SimpleValidator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Can Gelis",
+                    "email": "geliscan@gmail.com"
+                }
+            ],
+            "description": "Yet another validation class for PHP",
+            "time": "2015-05-21 13:22:59"
         },
         {
             "name": "slim/slim",
@@ -352,7 +431,9 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "slim/slim": 20
+        "slim/slim": 20,
+        "eoghanobrien/php-simple-mail": 20,
+        "simple-validator/simple-validator": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
