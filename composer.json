@@ -21,5 +21,8 @@
             "name": "Morgan PASQUOTTO",
             "email": "morganskatteur@free.fr"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4" : {"Ebip\\" : "class/"}
+    }
 }

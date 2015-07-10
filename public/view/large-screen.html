@@ -9,8 +9,20 @@
 		<div class="large-content-middle"><!-- middle/right-bottom --> 
 			{{ fixe.content | raw }}
 		</div>
-		<div class="large-bg-img {% if parallax is defined and parallax %}large-parallax{%endif%}" style="background-image: url('public/img/large-screen/{{fixe.bg}}')"></div>
+		<div class="large-bg-img {% if parallax is defined and parallax %}large-parallax{%endif%}" style="background-image: url('/public/img/large-screen/{{fixe.bg}}')"></div>
 	{% elseif slides is defined %}
+
+		<script type="text/javascript">
+			/**
+			* Slider
+			*/
+			$('#glide').glide({
+		       	type: 'carousel',
+		       	autoplay:5000,
+		       	animationDuration:800
+		    });
+		</script>
+
 		<div id="glide" class="glide">
 		    <div class="glide__arrows">
 		        <span class="glide__arrow prev" data-glide-dir="<"></span>
@@ -19,7 +31,7 @@
 		    <div class="glide__wrapper">
 
 		    	{% for slide in slides %}
-		    	<div class="glide__slide large-bg-img" style="background-image: url('public/img/large-screen/{{slide.bg}}')">
+		    	<div class="glide__slide large-bg-img" style="background-image: url('/public/img/large-screen/{{slide.bg}}')">
 			    	<div class="container">
 			    		<div class="large-content-right">
 			    			<h1>{{slide.title}}</h1>
@@ -35,13 +47,3 @@
 		<div id="map-canvas" class="large-bg-map large-parallax"></div>
 	{% endif %}
 </div>
-<script type="text/javascript">
-	/**
-	* Slider
-	*/
-	$('#glide').glide({
-       	type: 'carousel',
-       	autoplay:5500,
-       	animationDuration:800
-    });
-</script>

@@ -18,7 +18,7 @@ var Form = function(argId) {
 
 	this.setLoader = function() {
 		elmt.find(".form-submit").val("");
-		elmt.find(".form-submit").css("background", "url(img/loader-WHITE-26.gif) no-repeat center center, #F18854");
+		elmt.find(".form-submit").css("background", "url(/public/img/loader-WHITE-26.gif) no-repeat center center, #F18854");
 	}
 
 	this.removeLoader = function() {
@@ -26,10 +26,23 @@ var Form = function(argId) {
 		elmt.find(".form-submit").val(subVal);
 	}
 
-	this.flashErr = function(msg) {
-		if(isErr) elmt.find(".error").html(msg);
+	this.flashErr = function(errors) {
+
+		var content = "";
+		if(errors.isArray) {
+			for (var error in errors) {
+				content += errors[error]+"<br/>";
+			}
+		} else {
+			content = errors;
+		}
+		
+
+		if(isErr) {
+			elmt.find(".error").html(content);
+		}
 		else {
-			$("<div class='flash error'>"+msg+"</div>").insertBefore(elmt.find(".form-submit"));
+			$("<div class='flash error'>"+content+"</div>").insertBefore(elmt.find(".form-submit"));
 			isErr = true;
 		}
 	}

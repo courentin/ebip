@@ -51,7 +51,7 @@
 			<label for="form-message" class="form-label">Votre message</label>
 			<textarea id="form-message" class="form-input" required></textarea>
 		</div>
-		<div class="g-recaptcha" data-sitekey="<?php echo Conf::$reCaptcha['sitekey']; ?>"></div>
+		<div class="g-recaptcha" data-sitekey="{{ siteKey }}"></div>
 		<input class="form-submit" type="submit" value="Envoyer">
 	</form>
 	<div class="cb"></div>
@@ -75,7 +75,7 @@ $(document).ready(function() {
 		else {
 			$.ajax({
 				method: "POST",
-				url: "post",
+				url: "",
 				data: {
 					nom     : form.get("form-nom"),
 					prenom  : form.get("form-prenom"),
