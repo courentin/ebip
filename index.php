@@ -37,9 +37,7 @@ $app->get('/habitat', function ($request,$response,$args) {
 
 
 $app->get('/industrie', function ($request,$response,$args) {
-	$imgs = [
-
-	];
+	$imgs =  Ebip\Conf::$imagesIndex;
     return $this->view->render($response, 'industrie.html', ['imgs' => $imgs]);
 })->setName("industrie");
 

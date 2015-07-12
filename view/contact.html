@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 
-{% block title %}{{parent()}} pour l'industrie{% endblock %}
+{% block title %}{{parent()}} - Contact{% endblock %}
 {% block scripts %}
 	<script src="/public/js/maps.js" ></script>
 	<script src="/public/js/form.js" ></script>
@@ -10,7 +10,8 @@
 
 
 {% set largecontent %}
-<h1>Contact</h1>
+	<h1>Contact</h1>
+	<h2>Une question, un devis ?</h2>
 {% endset %}
 
 {% block largescreen %}
@@ -18,7 +19,8 @@
 		'map':true,
 		'black':true,
 		'header':true,
-		'hover':true
+		'hover':true,
+		'content':largecontent
 	})
 }}
 {% endblock %}

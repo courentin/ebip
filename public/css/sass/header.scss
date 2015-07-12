@@ -37,7 +37,7 @@
 		margin: 0 1.2em;
 		display: inline-block;
 		line-height: 2.5em;
-		font-size: 1.7em;
+		font-size: 1.8em;
 		font-weight: lighter;
 		text-decoration: none;
 		color: #FFF;
@@ -100,8 +100,8 @@
 		top:50%;
 		@include transform(translateY(-50%));
 		border:none;
-		background: url(../../img/menu.svg) no-repeat;
-		height: 37px;
+		background: image-url('menu.svg') no-repeat;
+		height: 42px;
 		width: 65px;
 		cursor: pointer;
 	}
@@ -110,9 +110,9 @@
 		position: fixed;
 		left:0;
 		top:0;
-		z-index: 10;
+		z-index: 15;
 		padding: 120px 0 0 0;
-		width: 70%;
+		width: 80%;
 		min-width: 390px;
 		height: 100%;
 		@include transform(translateX(-100%));
@@ -125,6 +125,7 @@
 		}
 	}
 	.nav.open {
+		box-shadow: 5px 0 15px rgba(0,0,0,.5);
 		transform:translateX(0%);
 	}
 }

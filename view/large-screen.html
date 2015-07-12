@@ -1,7 +1,7 @@
-<div {%if height is defined%}style="height:{{height}}"{%endif%} class="large{% if header %}-header{% endif %}">
+<div {%if height is defined%}style="height:{{height}}"{%endif%} class="large{% if header %}-header{% endif %} {% if hover is defined and hover %}large-hover{%endif%}">
 
 	{% if black is defined and black %}
-	 <div class="large-black {% if hover is defined and hover %}back-hover{%endif%}"></div>
+		<div class="large-black"></div>
 	{% endif %}
 
 
@@ -12,16 +12,7 @@
 		<div class="large-bg-img {% if parallax is defined and parallax %}large-parallax{%endif%}" style="background-image: url('/public/img/large-screen/{{fixe.bg}}')"></div>
 	{% elseif slides is defined %}
 
-		<script type="text/javascript">
-			/**
-			* Slider
-			*/
-			$('#glide').glide({
-		       	type: 'carousel',
-		       	autoplay:5000,
-		       	animationDuration:800
-		    });
-		</script>
+
 
 		<div id="glide" class="glide">
 		    <div class="glide__arrows">
@@ -44,6 +35,9 @@
 		    <ul class="glide__bullets"></ul>
 		</div>
 	{% elseif map is defined %}
+		<div class="large-content-middle"><!-- middle/right-bottom --> 
+			{{ content | raw }}
+		</div>
 		<div id="map-canvas" class="large-bg-map large-parallax"></div>
 	{% endif %}
 </div>

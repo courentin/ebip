@@ -70,7 +70,7 @@ footer {
   transition: height 0.3s;
 }
 /* line 59, sass/base.scss */
-.large-screen .large-black, .large-screen .large-black-hover {
+.large-screen .large-black {
   height: 100%;
   width: 100%;
   display: block;
@@ -230,12 +230,12 @@ body {
 }
 
 /* line 19, sass/large.scss */
-.large-black, .large-black-hover {
+.large-black {
   background: rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 0;
+  z-index: 5;
   top: 0;
   left: 0;
   -moz-box-shadow: inset 0px -59px 56px -35px rgba(0, 0, 0, 0.4);
@@ -243,23 +243,23 @@ body {
   box-shadow: inset 0px -59px 56px -35px rgba(0, 0, 0, 0.4);
 }
 
-/* line 34, sass/large.scss */
+/* line 30, sass/large.scss */
 .large-content, .large-content-middle {
   z-index: 10;
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
 }
-/* line 38, sass/large.scss */
+/* line 34, sass/large.scss */
 .large-content .btn-classic, .large-content-middle .btn-classic {
   margin-top: 10px;
 }
 
-/* line 43, sass/large.scss */
+/* line 39, sass/large.scss */
 .glide .container, .glide .large-content, .glide .large-content-middle {
   position: relative;
   height: 100%;
 }
 
-/* line 48, sass/large.scss */
+/* line 44, sass/large.scss */
 .large-content-middle {
   position: absolute;
   text-align: center;
@@ -267,13 +267,13 @@ body {
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
-/* line 56, sass/large.scss */
+/* line 52, sass/large.scss */
 .large-content-middle h1 {
   margin: 0;
   font-size: 5.5em;
   text-transform: uppercase;
 }
-/* line 61, sass/large.scss */
+/* line 57, sass/large.scss */
 .large-content-middle h2 {
   font-weight: normal;
   font-size: 1.54em;
@@ -281,7 +281,7 @@ body {
   margin: 0;
 }
 
-/* line 69, sass/large.scss */
+/* line 65, sass/large.scss */
 .large-content-right {
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -289,16 +289,16 @@ body {
   right: 10px;
   text-align: right;
 }
-/* line 71, sass/large.scss */
+/* line 67, sass/large.scss */
 .large-content-right .btn-classic {
   margin-top: 10px;
 }
-/* line 79, sass/large.scss */
+/* line 75, sass/large.scss */
 .large-content-right h1 {
   margin: 0;
   font-size: 2.5em;
 }
-/* line 83, sass/large.scss */
+/* line 79, sass/large.scss */
 .large-content-right h2 {
   font-weight: normal;
   margin: 0;
@@ -308,12 +308,12 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
-  /* line 93, sass/large.scss */
+  /* line 89, sass/large.scss */
   .large-content-right {
     right: 80px;
   }
 }
-/* line 98, sass/large.scss */
+/* line 94, sass/large.scss */
 .large-bg, .large-bg-img, .large-bg-map, .large-bg-slides {
   background-size: cover;
   background-position: center center;
@@ -321,70 +321,28 @@ body {
   z-index: -30;
 }
 
-/* line 105, sass/large.scss */
+/* line 101, sass/large.scss */
 .large-bg-img {
   width: 100%;
   display: inline-block;
 }
 
-/* line 111, sass/large.scss */
+/* line 107, sass/large.scss */
 .large-bg-map {
   width: 100%;
+  z-index: 0;
   display: inline-block;
 }
 
-/* line 117, sass/large.scss */
+/* line 114, sass/large.scss */
 .large-parallax {
   transform: translateY(-37px);
   height: 112%;
 }
 
-/* line 126, sass/large.scss */
+/* line 123, sass/large.scss */
 .large-bg-slides .large-slides .large-slide {
   width: 100%;
-}
-/* line 132, sass/large.scss */
-.large-bg-slides .slider-button, .large-bg-slides .left, .large-bg-slides .right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border: none;
-  background: none;
-  height: 100%;
-  width: 8%;
-  min-width: 20px;
-  opacity: .5;
-  cursor: pointer;
-  z-index: 20;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  fill: #FFFFFF;
-}
-/* line 146, sass/large.scss */
-.large-bg-slides .slider-button:hover, .large-bg-slides .left:hover, .large-bg-slides .right:hover {
-  opacity: .8;
-}
-/* line 150, sass/large.scss */
-.large-bg-slides .left {
-  background: url(../../img/left.svg) no-repeat center center;
-  left: 0;
-}
-/* line 154, sass/large.scss */
-.large-bg-slides .left:hover {
-  margin-left: -10px;
-  box-shadow: inset 43px 0 34px -19px rgba(0, 0, 0, 0.5);
-}
-/* line 159, sass/large.scss */
-.large-bg-slides .right {
-  background: url(../../img/right.svg) no-repeat center center;
-  right: 0;
-}
-/* line 163, sass/large.scss */
-.large-bg-slides .right:hover {
-  margin-right: -10px;
-  box-shadow: inset -43px 0 34px -19px rgba(0, 0, 0, 0.5);
 }
 
 /* line 1, sass/boutons.scss */
@@ -463,7 +421,7 @@ body {
   margin: 0 1.2em;
   display: inline-block;
   line-height: 2.5em;
-  font-size: 1.7em;
+  font-size: 1.8em;
   font-weight: lighter;
   text-decoration: none;
   color: #FFF;
@@ -539,8 +497,8 @@ body {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     border: none;
-    background: url(../../img/menu.svg) no-repeat;
-    height: 37px;
+    background: url('/public/img/menu.svg') no-repeat;
+    height: 42px;
     width: 65px;
     cursor: pointer;
   }
@@ -550,9 +508,9 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 10;
+    z-index: 15;
     padding: 120px 0 0 0;
-    width: 70%;
+    width: 80%;
     min-width: 390px;
     height: 100%;
     -moz-transform: translateX(-100%);
@@ -570,6 +528,7 @@ body {
 
   /* line 127, sass/header.scss */
   .nav.open {
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
     transform: translateX(0%);
   }
 }

@@ -21,14 +21,10 @@
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	z-index: 0;
+	z-index: 5;
 	top:0;
 	left: 0;
 	@include box-shadow(inset 0px -59px 56px -35px rgba(0, 0, 0, 0.4));
-}
-
-.large-black-hover {
-	@extend .large-black;
 }
 
 .large-content {
@@ -111,6 +107,7 @@
 .large-bg-map {
 	@extend .large-bg;
 	width: 100%;
+	z-index: 0;
 	display: inline-block;
 }
 
@@ -127,43 +124,4 @@
 			width: 100%;
 		}
 	}
-	
-
-	.slider-button {
-		position: absolute;
-		top:50%;
-		transform:translateY(-50%);
-		border: none;
-		background: none;
-		height: 100%;
-		width:8%;
-		min-width: 20px;
-		opacity: .5;
-		cursor: pointer;
-		z-index: 20;
-		@include transition(all $anim-duration);
-		fill:#FFFFFF;
-		&:hover {
-			opacity: .8;
-		}
-	}
-	.left {
-		@extend .slider-button;
-		background: url(../../img/left.svg) no-repeat center center;
-		left: 0;
-		&:hover {
-			margin-left:-10px;
-			box-shadow:inset 43px 0 34px -19px rgba(0,0,0,0.5)
-		}
-	}
-	.right {
-		@extend .slider-button;
-		background: url(../../img/right.svg) no-repeat center center;
-		right: 0;
-		&:hover {
-			margin-right:-10px;
-			box-shadow:inset -43px 0 34px -19px rgba(0,0,0,0.5)
-		}
-	}
-
 }
