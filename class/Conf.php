@@ -2,6 +2,12 @@
 namespace Ebip;
 
 class Conf {
+
+	static $mail = [
+		'mail' => 'ch2kn@free.fr',
+		'name' => 'ch2kn'
+	];
+
 	static $reCaptcha = [
 		'sitekey' => '6LeWAQQTAAAAAAdaNHOpUyV71ZqpqZ7dNSazCIFH',
 		'secret'  => '6LeWAQQTAAAAAMgTivhPzoTYdnQbD7W5-ZWzP4x1'
@@ -24,4 +30,5 @@ class Conf {
 			'subtitle' =>''
 		]
 	);
+
 }

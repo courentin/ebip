@@ -17,7 +17,8 @@
 {{ include('large-screen.html',{
 		'map':true,
 		'black':true,
-		'header':true
+		'header':true,
+		'hover':true
 	})
 }}
 {% endblock %}
@@ -52,6 +53,7 @@
 			<textarea id="form-message" class="form-input" required></textarea>
 		</div>
 		<div class="g-recaptcha" data-sitekey="{{ siteKey }}"></div>
+		<br/>
 		<input class="form-submit" type="submit" value="Envoyer">
 	</form>
 	<div class="cb"></div>
@@ -70,7 +72,7 @@ $(document).ready(function() {
 
 		if(captcha==="") {
 			form.removeLoader();
-			form.flashErr("Veuillez valider le captcha");
+			form.flashErr("Veuillez valider la vérification");
 		}
 		else {
 			$.ajax({
@@ -91,7 +93,7 @@ $(document).ready(function() {
 			}).done(function(res) {
 				console.log(res);
 				res = JSON.parse(res);
-				if(res.success) form.flashSuc("Votre message a été envoyé !");
+				if(res.success) form.flashSuc("Merci, votre message a été envoyé !");
 				else {
 					form.flashErr(res.err);
 					grecaptcha.reset();

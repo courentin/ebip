@@ -24,15 +24,15 @@ $(document).ready(function() {
 	/**
 	* Disparition black on over
 	*/
-	$(".large-screen").hoverIntent(
+	$(".black-hover").hoverIntent(
 		// enter
 		function() {
-			$(this).find(".container").fadeOut(200);
+			$(this).find(".large-content-middle").fadeOut(200);
 			$(this).find(".large-black").fadeOut(200);
 		},
 		//leave
 		function() {
-			$(this).find(".container").fadeIn(200);
+			$(this).find(".large-content-middle").fadeIn(200);
 			$(this).find(".large-black").fadeIn(200);
 	});
 });

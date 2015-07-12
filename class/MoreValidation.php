@@ -30,4 +30,17 @@ class MoreValidation extends SimpleValidator\Validator {
 	public static function code_postal($input) {
         return (preg_match("#^[0-9]{5}$#", $input) == 1);
 	}
+
+	public static function in() {
+		$args = func_get_args();
+		return in_array($args[0],array_slice($args,1));
+	}
+
+	public static function lower($input, $max) {
+		return floatval($input) < floatval($max);
+	}
+
+	public static function upper($input, $min) {
+		return floatval($input) > floatval($max);
+	}
 }
