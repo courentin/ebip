@@ -10,7 +10,7 @@ Error: Undefined variable: "$main-color".
 15: 			background: $main-color;
 16: 			border-radius: 50%;
 17: 			padding:15px;
-18: 			transition: all .27s cubic-bezier(0, 1.8, 1, 1.8);
+18: 			@include transition(all .27s cubic-bezier(0, 1.8, 1, 1.8));
 19: 			box-sizing:initial;
 20: 
 
@@ -88,4 +88,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$main-color\".\A         on line 15 of /home/corentin/Dropbox/Projets/ebip/site/public/css/sass/habitat.scss\A \A 10: 		display: inline-block;\A 11: 		margin-bottom: 20px;\A 12: 		img {\A 13: 			width: 80px;\A 14: 			height: 80px;\A 15: 			background: $main-color;\A 16: 			border-radius: 50%;\A 17: 			padding:15px;\A 18: 			transition: all .27s cubic-bezier(0, 1.8, 1, 1.8);\A 19: 			box-sizing:initial;\A 20: "; }
+  content: "Error: Undefined variable: \"$main-color\".\A         on line 15 of /home/corentin/Dropbox/Projets/ebip/site/public/css/sass/habitat.scss\A \A 10: 		display: inline-block;\A 11: 		margin-bottom: 20px;\A 12: 		img {\A 13: 			width: 80px;\A 14: 			height: 80px;\A 15: 			background: $main-color;\A 16: 			border-radius: 50%;\A 17: 			padding:15px;\A 18: 			@include transition(all .27s cubic-bezier(0, 1.8, 1, 1.8));\A 19: 			box-sizing:initial;\A 20: "; }

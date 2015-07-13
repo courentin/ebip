@@ -9,7 +9,7 @@ Error: Undefined variable: "$max-width".
 10: 
 11: 	@media screen and (max-width: $max-width) {
 12: 		width:49%;
-13: 		font-size: .7em;
+13: 		font-size: .65em;
 14: 	}
 15: 
 16: 	@media screen and (max-width: 630px) {
@@ -70,4 +70,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$max-width\".\A         on line 11 of /home/corentin/Dropbox/Projets/ebip/site/public/css/sass/contact.scss\A \A 6: 	width: 580px;\A 7: 	margin-top: 70px;\A 8: 	font-size: .86em;\A 9: 	font-style: normal;\A 10: \A 11: 	@media screen and (max-width: $max-width) {\A 12: 		width:49%;\A 13: 		font-size: .7em;\A 14: 	}\A 15: \A 16: 	@media screen and (max-width: 630px) {"; }
+  content: "Error: Undefined variable: \"$max-width\".\A         on line 11 of /home/corentin/Dropbox/Projets/ebip/site/public/css/sass/contact.scss\A \A 6: 	width: 580px;\A 7: 	margin-top: 70px;\A 8: 	font-size: .86em;\A 9: 	font-style: normal;\A 10: \A 11: 	@media screen and (max-width: $max-width) {\A 12: 		width:49%;\A 13: 		font-size: .65em;\A 14: 	}\A 15: \A 16: 	@media screen and (max-width: 630px) {"; }

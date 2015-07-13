@@ -12,7 +12,18 @@
 		<div class="large-bg-img {% if parallax is defined and parallax %}large-parallax{%endif%}" style="background-image: url('/public/img/large-screen/{{fixe.bg}}')"></div>
 	{% elseif slides is defined %}
 
-
+<script type="text/javascript">
+	$(document).ready(function() {
+		/**
+		* Slider
+		*/
+		$('#glide').glide({
+	       	type: 'carousel',
+	       	autoplay:5000,
+	       	animationDuration:800
+	    });
+	});
+</script>
 
 		<div id="glide" class="glide">
 		    <div class="glide__arrows">

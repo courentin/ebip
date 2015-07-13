@@ -30,7 +30,7 @@
 		display: block;
 		box-shadow: none;
 		
-		transition:background $anim-duration, border $anim-duration;
+		@include transition(background $anim-duration, border $anim-duration);
 
 		&:focus, &:valid {
 			background: #FFF;

@@ -72,12 +72,13 @@ $app->post('/contact/{type:industrie|habitat|default}', function ($request,$resp
 		    	'min_length(15)'
 		    ],
 		    'captcha' => [
+		    	'required',
 		    	're_captcha(' . Ebip\Conf::$reCaptcha['secret'] . ')'
 		    ]
 		);
 		$validation_result = Ebip\MoreValidation::validate($_POST, $rules);
 		$validation_result->customErrors([
-			'recaptcha' => 'Le code de vérification est incorrect',
+			're_captcha' => 'Le code de vérification est incorrect',
 			'in' => 'La valeur du champ :attribute est inconnu',
 			'upper' => 'La valeur du champ :attribute doit être supérieur à :params(0)',
 			'lower' => 'La valeur du champ :attribute doit être inférieur à :params(0)'

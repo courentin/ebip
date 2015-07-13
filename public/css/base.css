@@ -1,19 +1,18 @@
 /*
 Error: Undefined variable: "$text-color".
-        on line 4 of /home/corentin/Dropbox/Projets/ebip/site/public/css/sass/base.scss
+        on line 3 of /home/corentin/Dropbox/Projets/ebip/site/public/css/sass/base.scss
 
 1: body {
 2: 	font-family: "Open Sans", sans-serif;
-3: 	font-size: 1em;
-4: 	color: $text-color;
-5: }
-6: 
-7: * {
-8: 	box-sizing:border-box;
-9: }
+3: 	color: $text-color;
+4: }
+5: @media screen and (max-width: 630px) {
+6: 	html {
+7: 		font-size: .7em;
+8: 	}
 
 Backtrace:
-/home/corentin/Dropbox/Projets/ebip/site/public/css/sass/base.scss:4
+/home/corentin/Dropbox/Projets/ebip/site/public/css/sass/base.scss:3
 /var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/script/tree/variable.rb:49:in `_perform'
 /var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/script/tree/node.rb:50:in `perform'
 /var/lib/gems/1.9.1/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
@@ -64,4 +63,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$text-color\".\A         on line 4 of /home/corentin/Dropbox/Projets/ebip/site/public/css/sass/base.scss\A \A 1: body {\A 2: 	font-family: \"Open Sans\", sans-serif;\A 3: 	font-size: 1em;\A 4: 	color: $text-color;\A 5: }\A 6: \A 7: * {\A 8: 	box-sizing:border-box;\A 9: }"; }
+  content: "Error: Undefined variable: \"$text-color\".\A         on line 3 of /home/corentin/Dropbox/Projets/ebip/site/public/css/sass/base.scss\A \A 1: body {\A 2: 	font-family: \"Open Sans\", sans-serif;\A 3: 	color: $text-color;\A 4: }\A 5: @media screen and (max-width: 630px) {\A 6: 	html {\A 7: 		font-size: .7em;\A 8: 	}"; }

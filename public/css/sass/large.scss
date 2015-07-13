@@ -3,13 +3,21 @@
 	color: #FFF;
 	position: relative;
 	overflow: hidden;
-	transition: height $anim-duration;
+	font-size: 1rem;
+	@include transition(height $anim-duration);
 }
 @media screen and (max-width: $max-width) {
 	.large {
 		height: 330px;
 	}
 }
+@media screen and (max-width: 630px) {
+	.large {
+		height: 270px;
+		//font-size: .7rem;
+	}
+}
+
 
 .large-header {
 	@extend .large;
@@ -29,10 +37,11 @@
 
 .large-content {
 	@extend .container;
+	padding: 0 10px;
 	z-index: 10;
 	@include single-text-shadow(0px, 0px, 1px ,false,rgba(0,0,0,0.5));
 	.btn-classic {
-		margin-top: 10px;
+		margin-top: .625em;
 	}
 }
 
@@ -47,16 +56,16 @@
 	text-align: center;
 	left: 50%;
 	top:50%;
-	transform:translateX(-50%) translateY(-50%);
+	@include transform(translateX(-50%) translateY(-50%));
 
 	h1 {
 		margin: 0;
-		font-size: 5.5em;
+		font-size: 5.1em;
 		text-transform: uppercase;
 	}
 	h2 {
 		font-weight: normal;
-		font-size: 1.54em;
+		font-size: 1.6em;
 		line-height: 1.2em;
 		margin: 0
 	}
@@ -112,8 +121,14 @@
 }
 
 .large-parallax {
-	transform:translateY(-37px);
+	@include transform(translateY(-37px));
 	height: 112%;
+}
+
+@media screen and (max-width: 630px) {
+	.large-parallax {
+		height: 114%;
+	}
 }
 
 .large-bg-slides {

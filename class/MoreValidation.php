@@ -2,6 +2,11 @@
 namespace Ebip;
 use SimpleValidator;
 
+/**
+* Extension de la classe SImpleValidator,
+* rajout de quelques features, notamment la
+* validation reCaptcha
+*/
 class MoreValidation extends SimpleValidator\Validator {
 
 	public static function re_captcha($input, $secret) {
@@ -31,6 +36,14 @@ class MoreValidation extends SimpleValidator\Validator {
         return (preg_match("#^[0-9]{5}$#", $input) == 1);
 	}
 
+	/**
+	* Permet de savoir si une valeur est
+	* dans une liste de valeurs
+	* @param input : la valeur à tester
+	* @param(s)    : à la suite toute les valeurs
+	* @exemple     : in('abc','abc','def')
+	*                retourne true
+	*/
 	public static function in() {
 		$args = func_get_args();
 		return in_array($args[0],array_slice($args,1));

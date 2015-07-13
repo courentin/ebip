@@ -1,6 +1,7 @@
 .header {
 	background: #636363;
 	height: 180px;
+	font-size: 1rem;
 	.container {
 		position: relative;
 		height: 100%;
@@ -20,7 +21,7 @@
 	top:50%;
 	left: -30px;
 	@include transform(translateY(-50%));
-	transition: all $anim-duration;
+	@include transition(all $anim-duration);
 }
 
 .header-mobile-menu { display: none;}
@@ -84,6 +85,7 @@
 @media screen and (max-width: 630px) {
 	.header {
 		height: 120px;
+		font-size: 1.2em;
 	}
 	.header-logo {
 		height: 100px;
@@ -113,19 +115,17 @@
 		z-index: 15;
 		padding: 120px 0 0 0;
 		width: 80%;
-		min-width: 390px;
 		height: 100%;
 		@include transform(translateX(-100%));
 		background: #636363;
 
 		a {
 			display: block;
-			font-size: 3em;
 			margin: 0;
 		}
 	}
 	.nav.open {
 		box-shadow: 5px 0 15px rgba(0,0,0,.5);
-		transform:translateX(0%);
+		@include transform(translateX(0%));
 	}
 }

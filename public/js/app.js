@@ -29,16 +29,7 @@ $(document).ready(function() {
 			$(this).find(".large-content-middle").fadeIn(200);
 			$(this).find(".large-black").fadeIn(200);
 	});
-	
-		
-			/**
-			* Slider
-			*/
-			$('#glide').glide({
-		       	type: 'carousel',
-		       	autoplay:5000,
-		       	animationDuration:800
-		    });
+
 		
 	/**
 	* Gestion couleur menu

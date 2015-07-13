@@ -6,7 +6,15 @@ body {
 	width: 1200px;
 	margin: 0 auto;
 	padding:0 20px;
+	word-break:normal;
+	overflow: hidden;
 	@media screen and (max-width: $max-width) {
 		width:100%;
+	}
+}
+
+@media screen and (max-width: 630px) {
+	.container img {
+		max-width: 100%;
 	}
 }

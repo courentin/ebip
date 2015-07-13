@@ -10,7 +10,7 @@
 
 	@media screen and (max-width: $max-width) {
 		width:49%;
-		font-size: .7em;
+		font-size: .65em;
 	}
 
 	@media screen and (max-width: 630px) {
@@ -20,16 +20,16 @@
 		margin: 0;
 		font-size: 4.5em;
 		font-weight: lighter;
-		padding-left: 70px;
+		padding-left: 1.3em;
 		line-height: 1.3em;
 		margin-bottom: .5em
 	}
 	.contact-icon {
-		height: 54px;
-		width: 54px;
+		height: 3.85em;
+		width: 3.85em;
 		display: block;
 		float: left;
-		margin-top: 1.3em;
+		margin-top: 1.2em;
 	}
 	.contact-icon-location {
 		background-image: image-url('location.svg');
@@ -53,7 +53,7 @@
 	}
 	@media screen and (max-width: 630px) {
 		width:100%;
-		font-size:1.3em;
+		font-size:1em;
 	}
 	.error {
 		margin-bottom: 15px;
