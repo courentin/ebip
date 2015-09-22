@@ -425,7 +425,7 @@ body {
   color: #f18854;
 }
 /* line 52, sass/header.scss */
-.nav a.active {
+.nav a.active, .nav a:focus {
   color: #f18854;
 }
 
