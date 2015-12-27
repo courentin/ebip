@@ -39,14 +39,13 @@ class MoreValidation extends SimpleValidator\Validator {
 	/**
 	* Permet de savoir si une valeur est
 	* dans une liste de valeurs
-	* @param input : la valeur à tester
-	* @param(s)    : à la suite toute les valeurs
+	* @param value : la valeur à tester
+	* @param list  : à la suite toute les valeurs
 	* @exemple     : in('abc','abc','def')
 	*                retourne true
 	*/
-	public static function in() {
-		$args = func_get_args();
-		return in_array($args[0],array_slice($args,1));
+	public static function in($value, $list) {
+		return in_array($value,$list);
 	}
 
 	public static function lower($input, $max) {

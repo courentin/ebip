@@ -70,7 +70,7 @@
 		padding: 0.5em 1em;
 		font-weight: lighter;
 		cursor: pointer;
-		border-bottom: 3px solid #C95E2C;
+		border-bottom: 3px solid desaturate(darken($main-color, 17%), 20%);
 		&::-moz-focus-inner {
 		  border: 0;
 		}

@@ -1,15 +1,27 @@
-.btn-classic {
-	border:2px solid #FFF;
+@mixin btn($normal, $hover) {
+	border:0.06em solid $normal;
 	border-radius: 0.2em;
 	padding: 0.2em 0.6em;
-	color: #FFF;
+	color: $normal;
 	text-decoration: none;
 	font-size: 20px;
 	display: inline-block;
 	@include transition(all $anim-duration);
 
 	&:hover {
-		background:#FFF;
-		color: $text-color;
+		background: $normal;
+		color: $hover;
 	}
+}
+
+.btn-classic {
+	@include btn(#FFF, $text-color);
+}
+
+.btn-grey {
+	@include btn($text-color, #FFF);
+}
+
+.btn-main {
+	@include btn($main-color, #FFF);
 }

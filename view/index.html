@@ -33,5 +33,11 @@
 {% endblock %}
 
 {% block content %}
-	<h1 class="sub-title1">Ebip, pour l'industrie et l'habitat</h1>
+	<h1 class="sub-title1"><span style="font-size: 150%">Ebip,</span><br/>Électricité pour le bâtiment et l'industrie en Picardie<br/><span style="font-size: 70%">(et au-delà !)</span></h1>
+
+	<p class="sub-title1">
+		<a href="{{ url_for('habitat') }}" class="btn-main" style="font-size:.6em">Je suis un particulier !</a>
+		ou
+		<a href="{{ url_for('industrie') }}" class="btn-main" style="font-size:.6em">Je suis un professionnel !</a>
+	</p>
 {% endblock %}
